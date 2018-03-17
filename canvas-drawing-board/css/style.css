@@ -1,7 +1,27 @@
 *{
   margin: 0;
 }
+.p1{
+  cursor:url("http://p4895bd7a.bkt.clouddn.com//18-3-17/74469776.jpg"),default;
+}
+.p2{
+  cursor:url("http://p4895bd7a.bkt.clouddn.com//18-3-17/6942067.jpg"),default;
+}
 #canvas{
 
   background-color: #f00;
+}
+.actions{
+  position: fixed;
+  bottom:0;
+  left:0;
+}
+.actions >#brush{
+  display:none;
+}
+.actions.x>#brush{
+  display:inline-block;
+}
+.actions.x>#eraser{
+  display:none;
 }
