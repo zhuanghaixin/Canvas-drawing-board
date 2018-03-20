@@ -2,17 +2,32 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
   <title>我的画板</title>
+  <script src="//at.alicdn.com/t/font_595151_fpjnarvnrvn29.js"></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="p1">
 <canvas id="canvas"></canvas>
 <div class="actions" id="actions">
-  <button id="eraser">橡皮檫</button>
-  <button id="brush">画笔</button>
-  <button id="clearScreen">清屏</button>
-
-
+  <svg id="brush" class="icon active" aria-hidden="true">
+    <use xlink:href="#icon-pen"></use>
+  </svg>
+  <svg id="eraser" class="icon" aria-hidden="true">
+    <use xlink:href="#icon-erasertool"></use>
+  </svg>
+  <svg id="clearScreen" class="icon" aria-hidden="true">
+    <use xlink:href="#icon-delete"></use>
+  </svg>
+  <svg class="icon" aria-hidden="true">
+    <use xlink:href="#icon-download"></use>
+  </svg>
+  <ol class="colors">
+    <li id="red" class="red active"></li>
+    <li id="green" class="green"></li>
+    <li id="blue" class="blue"></li>
+  </ol>
 </div>
 <script src="js/index.js"></script>
 </body>

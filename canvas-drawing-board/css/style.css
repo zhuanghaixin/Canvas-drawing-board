@@ -1,3 +1,16 @@
+ul,li,ol{
+  list-style: none;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+.icon {
+  width: 1em; height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
 *{
   margin: 0;
 }
@@ -9,19 +22,64 @@
 }
 #canvas{
 
-  background-color: #f00;
+  background-color: #fff;
+  display: block;
 }
 .actions{
   position: fixed;
-  bottom:0;
+  top:0;
   left:0;
+  padding: 20px;
 }
-.actions >#brush{
-  display:none;
+.actions svg{
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0 10px;
+  transition: all 0.3s;
 }
-.actions.x>#brush{
-  display:inline-block;
+.actions svg.active{
+  fill: red;
+  transform: scale(1.5);
+
 }
-.actions.x>#eraser{
-  display:none;
+/*.actions >#brush{*/
+  /*display:none;*/
+/*}*/
+/*.actions.x>#brush{*/
+  /*display:inline-block;*/
+/*}*/
+/*.actions.x>#eraser{*/
+  /*display:none;*/
+/*}*/
+.colors{
+       position: fixed;
+       top: 60px;
+       left: 28px;
+       /*border: 1px solid red;*/
+     }
+.colors>li{
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  box-shadow:  0 0 3px  rgba(0, 0, 0, 0.5);
+  margin: 10px 0;
+  transition: all 0.3s;
+}
+.colors>li.red{
+  background-color: #f00;
+}
+.colors>li.green{
+  background-color: #0f0;
+}
+.colors>li.blue{
+  background-color: #00f;
+}
+
+.colors>li.active{
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  box-shadow:  0 0 3px  rgba(0, 0, 0, 1.5);
+  transform: scale(1.2);
+  margin: 10px 0;
 }
