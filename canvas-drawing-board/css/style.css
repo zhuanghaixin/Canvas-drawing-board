@@ -11,8 +11,8 @@ ul,li,ol{
   fill: currentColor;
   overflow: hidden;
 }
-*{
-  margin: 0;
+body{
+  overflow: hidden;
 }
 .p1{
   cursor:url("http://p4895bd7a.bkt.clouddn.com//18-3-17/74469776.jpg"),default;
