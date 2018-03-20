@@ -1,3 +1,7 @@
+//禁用手机滚动
+document.body.addEventListener('touchmove', function (event) {
+  event.preventDefault();
+}, false);
 var canvas = document.getElementById('canvas');
 var usingEraser = false;
 var context = canvas.getContext('2d');
