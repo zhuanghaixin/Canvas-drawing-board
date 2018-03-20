@@ -11,7 +11,7 @@ ul,li,ol{
   fill: currentColor;
   overflow: hidden;
 }
-body{
+html{
   overflow: hidden;
 }
 .p1{
