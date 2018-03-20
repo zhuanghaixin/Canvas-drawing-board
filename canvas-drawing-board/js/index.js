@@ -5,11 +5,42 @@ document.body.addEventListener('touchmove', function (event) {
 var canvas = document.getElementById('canvas');
 var usingEraser = false;
 var context = canvas.getContext('2d');
+var lineWidth=5;
+
+
 autoSetCanvasSize(canvas);
 listenToMouse(canvas);
 
 
-//设置Canvas宽高
+//初始化画板
+// function xxx() {
+//   init();
+//   window.onresize=function () {
+//    init();
+//   }
+//   function init() {
+//     var x=canvas.width;
+//     console.log("要开始了"+x);
+//     var y=canvas.height;
+//     console.log(y);
+//     var pageWidth = canvas.clientWidth;
+//     console.log(pageWidth);
+//     var pageHeight = canvas.clientHeight;
+//     console.log(pageHeight);
+//     context.fillStyle="white";
+//     context.fillRect(0, 0, pageWidth, pageHeight);
+//   }
+// }
+//
+// xxx(canvas);
+
+
+
+
+
+
+
+//初始化画板，宽高，背景颜色
 function autoSetCanvasSize(canvas) {
   setCanvasSize();
 
@@ -22,6 +53,8 @@ function autoSetCanvasSize(canvas) {
     var pageHeight = document.documentElement.clientHeight;
     canvas.width = pageWidth;
     canvas.height = pageHeight;
+    // context.fillStyle="white";
+    // context.fillRect(0, 0, pageWidth, pageHeight);
   }
 }
 
@@ -167,7 +200,7 @@ function drawCircle(x, y) {
 function drawLine(x, y, x1, y1) {
 
   // context.strokeStyle = 'black';
-  context.lineWidth = 10;
+  context.lineWidth = lineWidth;
   context.beginPath();
   context.moveTo(x, y +10);
   context.lineTo(x1, y1 +10);
@@ -176,7 +209,7 @@ function drawLine(x, y, x1, y1) {
 
 }
 
-//画笔
+//选择颜色
 red.onclick=function () {
   context.strokeStyle="red";
   red.classList.add("active");
@@ -195,6 +228,30 @@ blue.onclick=function () {
   blue.classList.add("active");
   green.classList.remove("active");
   red.classList.remove("active");
+}
+
+//选择粗细
+thin.onclick=function () {
+  console.log("thin");
+  lineWidth=5;
+}
+thick.onclick=function () {
+  console.log("thick");
+
+  lineWidth=10;
+}
+
+//下载
+download.onclick=function () {
+
+  var url=canvas.toDataURL("image/png");
+  console.log(url);
+  var a=document.createElement("a");
+  document.body.appendChild(a);
+  a.href=url;
+  a.download="下载";
+  a.target="_blank";
+  a.click();
 }
 /*******************/
 //橡皮檫

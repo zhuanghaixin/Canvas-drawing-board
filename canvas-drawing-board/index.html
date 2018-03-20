@@ -11,6 +11,7 @@
 </head>
 <body class="p1">
 <canvas id="canvas"></canvas>
+
 <div class="actions" id="actions">
   <svg id="brush" class="icon active" aria-hidden="true">
     <use xlink:href="#icon-pen"></use>
@@ -21,13 +22,17 @@
   <svg id="clearScreen" class="icon" aria-hidden="true">
     <use xlink:href="#icon-delete"></use>
   </svg>
-  <svg class="icon" aria-hidden="true">
+  <svg id="download" class="icon" aria-hidden="true">
     <use xlink:href="#icon-download"></use>
   </svg>
   <ol class="colors">
     <li id="red" class="red active"></li>
     <li id="green" class="green"></li>
     <li id="blue" class="blue"></li>
+  </ol>
+  <ol class="sizes">
+    <li id="thin" class="thin"></li>
+    <li id="thick" class="thick"></li>
   </ol>
 </div>
 <script src="js/index.js"></script>
