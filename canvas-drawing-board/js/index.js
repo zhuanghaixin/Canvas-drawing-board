@@ -53,8 +53,8 @@ function autoSetCanvasSize(canvas) {
     var pageHeight = document.documentElement.clientHeight;
     canvas.width = pageWidth;
     canvas.height = pageHeight;
-    // context.fillStyle="white";
-    // context.fillRect(0, 0, pageWidth, pageHeight);
+    context.fillStyle="white";
+    context.fillRect(0, 0, pageWidth, pageHeight);
   }
 }
 
